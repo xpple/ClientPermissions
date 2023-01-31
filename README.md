@@ -31,6 +31,6 @@ repositories {
 Import it:
 ```
 dependencies {
-    modImplementation 'dev.xpple:clientarguments:${version}'
+    modImplementation 'dev.xpple:clientpermissions:${version}'
 }
 ```

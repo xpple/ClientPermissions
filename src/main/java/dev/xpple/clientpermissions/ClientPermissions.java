@@ -1,6 +1,7 @@
 package dev.xpple.clientpermissions;
 
 import dev.xpple.clientpermissions.config.ConfigHelper;
+import dev.xpple.clientpermissions.config.Configs;
 import dev.xpple.clientpermissions.handlers.ModListHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -24,6 +25,8 @@ public class ClientPermissions implements ModInitializer {
 
         ConfigHelper.init();
 
-        ServerPlayNetworking.registerGlobalReceiver(MODS_CHANNEL, new ModListHandler());
+        if (Configs.enabled) {
+            ServerPlayNetworking.registerGlobalReceiver(MODS_CHANNEL, new ModListHandler());
+        }
     }
 }

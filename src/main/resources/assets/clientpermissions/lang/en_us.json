@@ -1,0 +1,5 @@
+{
+  "clientpermissions.illegalModsWarning.single": "The mod '%s' is not allowed on this server!",
+  "clientpermissions.illegalModsWarning.fiveOrLess": "The mods '%s' are not allowed on this server!",
+  "clientpermissions.illegalModsWarning.many": "The mods '%s' and more are not allowed on this server!"
+}

@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "clientpermissions",
+	"version": "${version}",
+	"name": "ClientPermissions",
+	"description": "A permissions mod for clients connecting to your server.",
+	"authors": [
+		"xpple"
+	],
+	"contact": {
+		"homepage": "https://xpple.dev/",
+		"sources": "https://github.com/xpple/ClientPermissions/"
+	},
+	"license": "LGPL-3.0-or-later",
+	"icon": "assets/clientpermissions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.xpple.clientpermissions.ClientPermissions"
+		],
+		"client": [
+			"dev.xpple.clientpermissions.ClientPermissionsClient"
+		]
+	},
+	"mixins": [
+		"clientpermissions.mixins.json",
+		{
+			"config": "clientpermissions.mixins.client.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.13",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

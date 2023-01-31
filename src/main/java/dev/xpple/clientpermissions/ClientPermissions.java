@@ -11,19 +11,19 @@ import java.nio.file.Path;
 
 public class ClientPermissions implements ModInitializer {
 
-	public static final String MOD_ID = "clientpermissions";
-	public static final Path MOD_PATH = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID);
+    public static final String MOD_ID = "clientpermissions";
+    public static final Path MOD_PATH = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID);
 
-	public static final Identifier MODS_CHANNEL = new Identifier(MOD_ID, "mods");
-	public static final Identifier FEATURES_CHANNEL = new Identifier(MOD_ID, "features");
+    public static final Identifier MODS_CHANNEL = new Identifier(MOD_ID, "mods");
+    public static final Identifier FEATURES_CHANNEL = new Identifier(MOD_ID, "features");
 
-	@Override
-	public void onInitialize() {
-		//noinspection ResultOfMethodCallIgnored
-		MOD_PATH.toFile().mkdir();
+    @Override
+    public void onInitialize() {
+        //noinspection ResultOfMethodCallIgnored
+        MOD_PATH.toFile().mkdir();
 
-		ConfigHelper.init();
+        ConfigHelper.init();
 
-		ServerPlayNetworking.registerGlobalReceiver(MODS_CHANNEL, new ModListHandler());
-	}
+        ServerPlayNetworking.registerGlobalReceiver(MODS_CHANNEL, new ModListHandler());
+    }
 }

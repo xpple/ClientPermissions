@@ -16,18 +16,18 @@ import static dev.xpple.clientpermissions.ClientPermissions.MODS_CHANNEL;
 
 public class ClientPermissionsClient implements ClientModInitializer {
 
-	@Override
-	public void onInitializeClient() {
-		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
-			Collection<ModContainer> mods = FabricLoader.getInstance().getAllMods();
+    @Override
+    public void onInitializeClient() {
+        ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+            Collection<ModContainer> mods = FabricLoader.getInstance().getAllMods();
 
-			PacketByteBuf buf = PacketByteBufs.create();
-			buf.writeInt(mods.size());
-			mods.forEach(mod -> buf.writeString(mod.getMetadata().getId()));
+            PacketByteBuf buf = PacketByteBufs.create();
+            buf.writeInt(mods.size());
+            mods.forEach(mod -> buf.writeString(mod.getMetadata().getId()));
 
-			sender.sendPacket(MODS_CHANNEL, buf);
-		});
+            sender.sendPacket(MODS_CHANNEL, buf);
+        });
 
-		ClientPlayNetworking.registerGlobalReceiver(FEATURES_CHANNEL, new ModFeaturesHandler());
-	}
+        ClientPlayNetworking.registerGlobalReceiver(FEATURES_CHANNEL, new ModFeaturesHandler());
+    }
 }

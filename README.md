@@ -18,7 +18,7 @@ If the client is using any illegal mods, the server can either kick or warn the 
 the player will be presented with a disconnection screen containing a list of mods the player should disable in order
 to join the server. If the server decides to warn the player, the player will merely be warned. This is with the
 intention that the client will use the list of disallowed features to locally disable them. If the client decides to
-ignore the warning, the player may risk other punishment. This way, no players will never be punished without
+ignore the warning, the player may risk other punishment. This way, no players will ever be punished without
 intentionally breaking any rules.
 
 ## Installation

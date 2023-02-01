@@ -21,6 +21,13 @@ intention that the client will use the list of disallowed features to locally di
 ignore the warning, the player may risk other punishment. This way, no players will ever be punished without
 intentionally breaking any rules.
 
+### Objections
+Of course, mods like this one are relatively easy to bypass. Hence, a common objection towards such systems is that it 
+will have no effect. However, in my opinion, this is conclusion is drawn too quickly. Compare it with the legal system; 
+after all there are still criminals despite there being preventative laws. This mod aims to help prevent inappropriate 
+use of other mods, whilst being aware of its limitations. It is simply impossible to completely shut down unfair
+gameplay.
+
 ## Installation
 Replace `${version}` with the artifact version.
 

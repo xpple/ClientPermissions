@@ -1,0 +1,6 @@
+{
+  "modmenu.descriptionTranslation.clientpermissions": "Сезнең серверга кушылучы клиентлар өчен рөхсәт моды.",
+  "clientpermissions.illegalModsWarning.single": "«%s» моды рөхсәт бу серверда ителмәде!",
+  "clientpermissions.illegalModsWarning.fiveOrLess": "«%s» модлары бу серверда рөхсәт ителмәде!",
+  "clientpermissions.illegalModsWarning.many": "«%s» һәм күбрәк модлар бу серверда рөхсәт ителмәде!"
+}
